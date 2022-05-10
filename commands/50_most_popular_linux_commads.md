@@ -71,3 +71,36 @@
 ```$ cp -r STUFF STUFF COPY ``` = recursive; copy one dir to multiple
 <br/>
 <br/>
+
+## Head
+- the beginning of file (10 lines by default)
+- use it if you have really large file
+
+```$ head colors.txt ``` = print out the first ten lines
+
+```$ head colors.txt -n 100``` = lines; prints out first 100 lines 
+<br/>
+<br/>
+
+## Tail
+- the end of file
+
+```$ tail colors.txt ``` = print out the last 10 lines
+
+```$ tail colors.txt -n 20 ``` = print out the last 20 lines
+
+```$ tail -f /var/log/system.log ``` = print out the end of the file with live updating (constant changing) 
+<br/>
+<br/>
+
+## Date 
+```$ date ``` = print out the current date 
+<br/>
+<br/>
+
+## Redirecting standard output
+```$ date > today.txt ``` = don't show the output in terminal but instead it redirect the output to the file today.txt
+
+- but if we repeat the commd again it will replace the content of the file with the new date
+<br/>
+<br/>
