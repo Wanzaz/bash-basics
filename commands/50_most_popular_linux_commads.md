@@ -102,5 +102,64 @@
 ```$ date > today.txt ``` = don't show the output in terminal but instead it redirect the output to the file today.txt
 
 - but if we repeat the commd again it will replace the content of the file with the new date
+
+- if you repeate ir just adds the content 
+
+- the file doesn't have to exist; it will be created during the process
+
+```$ pwd >> SOMS.txt ``` = it redirect the output in the file and it doesn't rewrite the file 
+
+- if you repeate it just adds the content 
+
+- the file doesn't have to exist; it will be created during the process
+
+```$ ls -l > contents.txt```
+<br/>
+<br/> 
+
+## Cat
+- concatenate 
+
+```$ cat file.txt ``` = print out the whole content of the file 
+
+```$ cat white.txt yellow.tx ```= print out the whole content of the multiple files 
+
+```$ cat food_list.txt fruit.txt vegetables.txt > everything.txt ``` = put the content of the 3 files into one 
+
+```$ cat -n everything.txt ``` = show the content of the file with numbered lines 
+<br/>
+<br/> 
+
+## Less
+```$ less song.txt ``` = better than cat 
+
+- /green = searches for green in the file 
+
+- Enter + b = scroll back up 
+
+- q = to exit the file
+<br/> 
+
+## Echo
+```$ echo "hello" ``` = prints hello 
+
+```$ echo "USERNAME=JACK" >> config.txt ``` = adds echo output to the config.txt
+<br/>
+<br/> 
+
+## Wc
+- give us useful information about the file or input it receives via pipes 
+
+```$ wc song.txt ``` = print new lines; words; characters; byte 
+
+```$ wc -l song.txt ``` = print only lines 
+
+```$ wc -c song.txt ``` = print chars only 
+
+```$ wc -w song.txt ``` = print words only 
+
+## Piping
+```$ ls -l | wc ``` = print result for ls -l ; begging of piping 
+
 <br/>
 <br/>
