@@ -161,5 +161,103 @@
 ## Piping
 ```$ ls -l | wc ``` = print result for ls -l ; begging of piping 
 
+
+```$ cat beens.txt salat.txt | wc ```
+
+```$ cat groceries.txt bucher | wc -l > number.txt ``` = put the number in of lines into file
 <br/>
+<br/> 
+
+## Sort
+```$ sort food.txt ``` = print sorted content by alphanet 
+
+```$ sort food.txt > sorted_food.txt ``` = put the sorted food output to file 
+
+```$ sort nums.txt ``` = sort numbers by number at the begging 
+
+```$ sort -n nums.txt ``` = numeric; sort numbers how big they are 
+
+```$ sort -rn nums.txt ``` = reverse numeric; sort numbers how big they are 
+
+```$ sort -nu nums.txt ``` = unique numeric; sort numbers how big they are and don't take same numbers twice 
+
+```$ cat food.txt fruit.txt | sort ``` = sorting the output of cat 
+
+```$ sort -nu nums.txt | wc -l ``` = unique numeric; returns the number of unique number in nums.txt
 <br/>
+<br/> 
+
+## Uniq
+- report or omit repeated lines 
+
+```$ uniq vegetables.txt ``` = don't allow to same values to be next to each other 
+
+```$ sort food.txt | uniq ``` = print out uniq values of food.txt 
+
+```$ sort -d food.txt  | uniq -d``` = print only duplicated lines, one for each group 
+
+```$ sort -d food.txt  | uniq -u``` = print only non-duplicated lines, one for each group 
+
+```$ sort -d food.txt  | uniq -c``` = count; how many times is the value at the file 
+
+```$ sort -d food.txt  | uniq -c | sort -nr``` = count and sort the output by the most used
+<br/>
+<br/> 
+
+## Expansions
+```$ echo $PATH ``` = print the expanded value of this variable 
+
+```$ echo *  ``` = print every folder, file in this dir 
+
+```$ echo *.txt ``` = print every file that ends with .txt 
+
+```$ ls -l *.txt ``` = print every file with eding on .txt in this dir 
+
+``` ? ``` = match single character 
+
+```$ echo *.??? ``` = print anything that ends with 3 char 
+
+```$ rm *.?? ``` = remove everything that ends with 2 char 
+
+```$ echo {a, b, c}.txt ``` = print every combination of a.txt b.txt .etc 
+
+```$ touch app.{js, py, html, css} ``` = make new file for every combination 
+
+```$ ls app.?? ``` = list the app with ending char 
+
+```$ echo {1..99}``` = print the numbers between 1 and 99 
+
+- with the ?, * you can mv, cp, rm etc.
+<br/>
+
+##  Diff
+- ```diff ``` id a handy command. Suppose you have 2 files, which contain almost the same information and you can't find the difference between the two. 
+
+- ```diff ``` will process the files and tell whatis the difference. 
+
+```$ diff file1.txt file2.txt ``` = print the difference between the two (and where is it)
+- ``` < ``` would mean that the diff is in the file1 
+
+```$ diff -y first.txt second.txt ``` = will compare the files liny by line 
+
+```$ diff -u first.txt second.txt ``` = git version control; show the diff
+<br/>
+<br/> 
+
+## Find
+- The ```find ``` command can be used to find files or folders matching a particular patern. It searches recursively 
+
+```$ find . -name '*.js'  ``` = find everything  that ends with .js 
+
+```$ diff . -name '7' ``` = find everything that includes 7 
+
+```$ find . -type d ``` = find every dir 
+
+```$ find . -type f ``` = find every file 
+
+```$ find . -type d -iname f 'E' ``` = find every folder that includes e or E 
+
+```$ find . -type f  -size +100k ``` = find file in the dir that have +100 kilobits 
+
+```$ find . -type f -size +100k -exec ls -l {} /:``` = 
+will use the results from the command and use that for ls -l
