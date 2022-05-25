@@ -261,3 +261,146 @@
 
 ```$ find . -type f -size +100k -exec ls -l {} /:``` = 
 will use the results from the command and use that for ls -l
+<br/> 
+<br/> 
+
+## Grep
+- You can use the 
+
+```$ grep green song.txt ```  = search for "green" in the song file and print out the matches 
+
+```$ grep -n green song.txt  ``` = print out the matches with numbered lines 
+
+```$ grep -nC 2 green song.txt  ``` = print out 2 lines after and before the match 
+
+```$ grep -r "chicken" .  ``` = recursive; search for chicken recursively (case sensitive)
+<br/>
+<br/> 
+
+## Du
+- The command ```du ``` will calculate the size of a dir as whole 
+
+```$ du ``` = calculate the dir size 
+
+```$ du Pokemon  ``` = calculate the size of dir in dir Pokemon 
+
+```$ du -m  ``` = show the size of a dir in megabytes 
+
+```$ du -mh  ``` = readable for human 
+
+```$ du -h | sort -h ``` = sort the dir sizes 
+
+```$ du -h | sort -h | tail ``` = show the 10 largest dir 
+
+```$ du -h | sort -hr | head ``` = show the 10 largest dir
+<br/>
+<br/> 
+
+## Df
+- The ```df ``` command is used to get disk usage information 
+
+```$ df ``` = disk usage information 
+
+```$ df -h ``` = human; disk usage information in human format 
+
+```$ df -h Desktop ``` = Desktop disk usage information 
+<br/>
+<br/> 
+
+## History 
+- Every time we run a command that's memorized in the history. 
+
+```$ history ``` = show all commands you used and line number 
+
+```$ !2064 ``` = run the command in history 
+
+```$ history | less ``` = better view of output 
+
+```$ history | greb "cook" ``` = 
+<br/>
+<br/> 
+
+## Ps
+- Your computer is running at all times different processes. 
+
+- You can inspect them all using the ```ps ``` commmand: 
+
+```$ ps ``` = process status 
+
+```$ ps ax ```
+<br/>
+<br/> 
+
+## Top
+- The ```top ``` command is used to display real-time information about running processes in the system 
+
+```$ top ```
+<br/>
+<br/> 
+
+## Kill
+- Linux processes can receive a variety of signals and react to them 
+
+- The ```kill ``` program send a variety of signals to a program 
+
+- It's not just to terminate a program, like we would suggest, but that's its main job. 
+
+```$ kill -l ``` = list different signals 
+
+```$ kill 112768 ``` = don't kill the process 
+
+```$ kill -KILL 112768 ``` = instead of KILL you can use the 9; to kill the process
+<br/>
+<br/> 
+
+## Killall
+- The ``killall ``` command kills more than one process with normal process name and not PID 
+
+```$ killall -9 node ``` = kill all files with node
+<br/>
+<br/>
+
+
+## Jobs
+```$ find / -ctime -l > all_changes.txt ```
+
+- CTRL + C = suspend the process 
+
+- CTRL + Z = stop the process 
+
+```$ jobs ``` = show which commads were stopped, suspended and etc. 
+
+```$ sleep 50 & ``` = & means the command run in the background (then you can use the ```fg ``` command to run it normally)
+<br/>
+<br/> 
+
+#### Bg
+```$ bg ``` = runs the 1. command in jobs in background 
+<br/>
+<br/> 
+
+### Fg
+```$ fg 2 ``` = rerun the 2. command in jobs output
+<br/>
+<br/> 
+
+## Gzip
+- Zip files individualy
+```$ gzip all_changes.txt ``` = zip a file 
+
+```$ gzip -d file_name.gz ``` = unzip a file 
+
+```$ gzip -kv file_name.txt ``` = zip a file and tell you how many % of a file size were decreased 
+
+```$ gzip file_name.txt one.txt two.txt ``` = zip the 3 files but individualy
+<br/>
+<br/> 
+
+## Gunzip
+```$ gunzip file_name.hz ``` = unzip a file 
+
+```$ gzip -d file_name.txt ``` = unzi
+<br/>
+<br/>
+
+
