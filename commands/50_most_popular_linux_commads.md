@@ -374,7 +374,7 @@ will use the results from the command and use that for ls -l
 <br/>
 <br/> 
 
-#### Bg
+### Bg
 ```$ bg ``` = runs the 1. command in jobs in background 
 <br/>
 <br/> 
@@ -403,4 +403,42 @@ will use the results from the command and use that for ls -l
 <br/>
 <br/>
 
+## Tar
+```$ tar -cf archive.tar file1.txt file2.txt ``` = create an archive of 2 files 
+
+```$ tar -xf archive.tar ``` = extract files from archive 
+
+```$ tar -tf archive.tar ``` = list the files that are in archive 
+
+```$ tar -czf archive.tar file1.txt file2.txt ``` = create new archive and also keep the files
+<br/>
+<br/> 
+
+## Nano
+- ```nano ``` is beginner friendly editor 
+
+- CTRL + X = exit the editor 
+
+- CTRL + S = save 
+
+- CTRL + K = cut line 
+
+- CTRL + U = paste line 
+
+```$ nano bee.txt ``` = open file in nano editor
+<br/>
+<br/> 
+
+## Alias
+```$ alias myls='ls -la'``` = create shorcut of ls -la command to myls 
+
+```$ alias ``` = list all my alias 
+
+```$ alias pscpu10='ps auxf | sort -nr -k 3 | head -10 ``` = show  top 10 demanding processes on cpu 
+
+```$ nvim .bashrc ``` = configure alias in this file 
+
+```$ source .bashrc ``` = to be able to use the alias without booting 
+
+```$ nvim .zsrhc ```
 
