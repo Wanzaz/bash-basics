@@ -442,3 +442,49 @@ will use the results from the command and use that for ls -l
 
 ```$ nvim .zsrhc ```
 
+```$ alias lsthis="ls $PWD" ``` = double quotes; ls dir in specific dir 
+
+```$ alias Isthis='Is $PWD' ``` = single quotes; ls dir in every dir
+<br/>
+<br/> 
+
+## Xargs
+- The ```xargs ``` command is used in a UNIX shell to convert input from standard input into arguments to a command. 
+
+```$ cat dead_players.txt | xargs rm ``` = removes the nams in the file out of current dir 
+
+```$ find . -size +1M ``` = list files bigger than 1M 
+
+```$ find . -size +1M | xargs ls -lh``` = list files bigger than 1 M in format ls -lh
+<br/>
+<br/> 
+
+## Ln
+- The ```ln ``` command is part of the Linux file system commands 
+
+- Two types of links: hard links and soft links
+<br/>
+<br/> 
+
+## Hard links
+```$ ln original.txt hard_link.txt ``` = the hard_link.txt is the same file as the original but under different name 
+
+- If we delete the original.txt first the hard_link.txt will be also deleted because it is pointing to the same memory 
+
+- If we delete the hard_link.txt first the original will stay
+<br/>
+<br/> 
+
+## Soft link
+```$ ln -s original.txt symlink.txt ``` = symlink.txt is pointing on the original.txt so it share the same content with any change 
+
+- If I delete the original file the link file stays but has nothing to point on
+<br/>
+<br/> 
+
+## Who
+- The ```who ``` displays the users logged in to the system. 
+
+```$ who  ``` = show users tha logged in to the system (count every window severally)
+<br/>
+<br/>
