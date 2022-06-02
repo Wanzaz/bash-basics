@@ -488,3 +488,77 @@ will use the results from the command and use that for ls -l
 ```$ who  ``` = show users tha logged in to the system (count every window severally)
 <br/>
 <br/>
+
+## Su
+- While you're logged in the terminal shell with one user, you might have the need to switvh to another user. 
+
+
+- Different user have different permissions 
+
+```home/colt$ exit  ``` l 
+
+```$ su - elvis  ``` = take me to home directory after entering the password 
+
+```$ logout ``` = ctrl + d
+<br/>
+<br/> 
+
+## Sudo
+- Is commonly used to run a command as a root 
+
+```$ sudo nvim /etc/hosts ``` = give us the permission to change content of it by entering our password
+<br/>
+<br/> 
+
+## Passwd
+- Users in Linux have password assigned. You can change the password using ```passwd 
+
+```$ sudo passwd elvis ``` = change elvis's password (without the need knowing it)
+<br/>
+<br/> 
+
+## Chown
+- Every file/dir in OS Linux or MacOS (and every UNIX system in general) has an owner. 
+
+- The owner of a file can do everything with it. It can decide the fate of the file. 
+
+- The owner (and the ```root``` user) can change the user to another user, too, using the ```chown ```command. 
+
+```$ sudo chown wanzaz Music/ ```
+
+```$ groups ```
+<br/>
+<br/> 
+
+## Understanding Permissions
+- ``` - ``` = regular file 
+
+- ```d ``` = directory 
+
+- ```c ``` = character special file 
+
+- ``` l ``` = symbolic link 
+
+- ```-rw-rw-r-- ```
+
+```
+   - - - - - - - - - - - - -
+   | owner | group | world |
+   - - - - - - - - - - - - -
+   |  rw-  |  rw-  |  r--  |
+   - - - - - - - - - - - - -
+```
+
+- ```r ``` = Read
+
+- ```w ``` = Write
+
+- ```e``` = Execute
+    - you can cd in a dir
+    - you can execute a file 
+
+- ```-``` = file cannot be read, write, or execute
+<br/>
+<br/>
+
+
